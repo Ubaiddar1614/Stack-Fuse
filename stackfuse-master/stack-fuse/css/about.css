@@ -1,0 +1,446 @@
+/* Import base styles */
+@import url('index.css');
+
+/* About Hero Section */
+.about-hero {
+    padding: 8rem 0 5rem;
+    min-height: auto;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(15, 23, 42, 0.9));
+}
+
+.about-hero .container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-hero .hero-content {
+    flex: 1;
+}
+
+.about-hero .hero-image {
+    flex: 1;
+    position: relative;
+    min-height: 400px;
+}
+
+.team-illustration {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.dev {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: var(--dark-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.dev-1 {
+    top: 20%;
+    left: 20%;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.8), rgba(255, 101, 132, 0.8));
+}
+
+.dev-2 {
+    bottom: 20%;
+    right: 20%;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.8), rgba(255, 189, 46, 0.8));
+}
+
+.dev-icon {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+.connecting-line {
+    position: absolute;
+    width: 70%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    z-index: 1;
+}
+
+.pulse-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Our Story Section */
+.our-story {
+    padding: 5rem 0;
+    background: var(--dark);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 10px;
+}
+
+.timeline-item {
+    padding: 20px 0;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 50px;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 50px;
+    text-align: left;
+}
+
+.timeline-date {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.timeline-content {
+    background: var(--dark-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+/* Meet The Team */
+.meet-team {
+    padding: 5rem 0;
+    background: rgba(15, 23, 42, 0.5);
+}
+
+.team-members {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: var(--dark-light);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.2);
+}
+
+.team-img {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-img img {
+    transform: scale(1.05);
+}
+
+.dev-badge {
+    position: absolute;
+    bottom: -25px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    border: 5px solid var(--dark);
+    z-index: 2;
+}
+
+.team-info {
+    padding: 2rem;
+    flex: 1;
+}
+
+.team-info h3 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.role {
+    display: block;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.bio {
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-tag {
+    background: rgba(108, 99, 255, 0.1);
+    color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+}
+
+.team-quote {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid var(--primary);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.team-quote i {
+    color: var(--primary);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.3;
+}
+
+.team-quote p {
+    padding-left: 2rem;
+    font-style: italic;
+    color: var(--light);
+    margin: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.team-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--dark-light);
+    border-radius: 10px;
+}
+
+.team-cta h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Values Section */
+.our-values {
+    padding: 5rem 0;
+    background: var(--dark);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.value-card {
+    background: var(--dark-light);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(108, 99, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.value-card h3 {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .about-hero .container {
+        flex-direction: column;
+    }
+    
+    .about-hero .hero-content, 
+    .about-hero .hero-image {
+        width: 100%;
+    }
+    
+    .about-hero .hero-image {
+        margin-top: 3rem;
+        min-height: 300px;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+        text-align: left !important;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dev {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .dev-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .dev-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .team-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
