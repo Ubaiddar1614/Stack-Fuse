@@ -15,6 +15,7 @@ We specialize in:
 ---
 📬 Contact Us
 📧 Email: stackfuse14@gmail.com
-📸 Instagram: @stack.fuse
+📸 Instagram: @stackfuse
+whatsapp: +92 3000439986
 Made with ❤️ by Ubaid, Maheen, and the Stack Fuse team.
 "Empowering students. Elevating startups."
